@@ -1,0 +1,61 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 31621B160E4BE3850084937E /* NinjaSearch */;
+		activeTarget = 4DDCA7030ACC9A6100E082CE /* NinjaSearch */;
+		addToTargets = (
+		);
+		codeSenseManager = 31621B1E0E4BE38E0084937E /* Code sense */;
+		executables = (
+			31621B160E4BE3850084937E /* NinjaSearch */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 239854469;
+			PBXWorkspaceStateSaveDate = 239854469;
+		};
+		sourceControlManager = 31621B1D0E4BE38E0084937E /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	31621B160E4BE3850084937E /* NinjaSearch */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = NinjaSearch;
+		sourceDirectories = (
+		);
+	};
+	31621B1D0E4BE38E0084937E /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	31621B1E0E4BE38E0084937E /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	4DDCA7030ACC9A6100E082CE /* NinjaSearch */ = {
+		activeExec = 0;
+		executables = (
+			31621B160E4BE3850084937E /* NinjaSearch */,
+		);
+	};
+}
