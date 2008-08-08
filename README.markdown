@@ -13,7 +13,9 @@ of each title, and the "nise" search string matches to starting letters of each 
 NinjaSearch will also return results where the search string has matches against
 an optional description string for each item being filtered against. So a search
 string of "nise death" could match against the various "NinjaSearch" items as above
-but further filtered by items who's description field includes the word "death".
+but further filtered by items whose description field includes the word "death". 
+Or any items with descriptions including the words "nise" and "death"; if "nise" 
+were a word in your language. Its not in mine, but you get the jist.
 
 Each item in the list that is filtered to be visiable (e.g. any of the 
 "NinjaSearch" items above) is displayed in a list, which its title and optional
