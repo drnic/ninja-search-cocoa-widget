@@ -24,3 +24,9 @@ One item from the visible list can be selected, subsequently closing the NinjaSe
 app and returning the item information as text to STDOUT.
 
 The original list data is passed to NinjaSearch via STDIN.
+
+## Limitations
+
+* NinjaSearch is only available on OS X 10.4+ (due to NSSearchField)
+* Um, it doesn't work yet. Its just an idea and a nib.
+
