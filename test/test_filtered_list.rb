@@ -14,6 +14,7 @@ class TestFilteredList < Test::Unit::TestCase
   context "For a list" do
     setup do
       @list = ["Quick Brown Fox",
+        "QUICKBROWNFOX",
         "QuickBrownFox",
         "quick_brown_fox",
         "quick-brown-fox",
@@ -26,7 +27,7 @@ class TestFilteredList < Test::Unit::TestCase
       
       context "and search 'Q'" do
         setup { @results = filtered_list.filter('Q') }
-        should_have_result_items ['Quick Brown Fox', 'QuickBrownFox']
+        should_have_result_items ['Quick Brown Fox', "QUICKBROWNFOX", 'QuickBrownFox']
       end
       
       context "and search 'QB'" do
@@ -37,6 +38,25 @@ class TestFilteredList < Test::Unit::TestCase
       context "and search 'QuBFo'" do
         setup { @results = filtered_list.filter('QuBFo') }
         should_have_result_items ['Quick Brown Fox']
+      end
+    end
+    
+    context "filtered by capitalizes" do
+      setup { @filtered_list = FilteredList.new(@list, :capitalizes) }
+      
+      context "and search 'Q'" do
+        setup { @results = filtered_list.filter('Q') }
+        should_have_result_items ['Quick Brown Fox', "QUICKBROWNFOX", 'QuickBrownFox']
+      end
+      
+      context "and search 'QB'" do
+        setup { @results = filtered_list.filter('QB') }
+        should_have_result_items ['Quick Brown Fox', 'QuickBrownFox']
+      end
+      
+      context "and search 'QuBFo'" do
+        setup { @results = filtered_list.filter('QuBFo') }
+        should_have_result_items ['Quick Brown Fox', 'QuickBrownFox']
       end
     end
     

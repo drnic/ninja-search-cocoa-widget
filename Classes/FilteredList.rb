@@ -42,6 +42,10 @@ class FilteredList
     case filter_type
     when :spaces
       item.split(/\s+/)
+    when :capitalizes
+      item.split(/(?:[^A-Z])[A-Z]/)
+    else
+      throw "Unknown filter type '#{filter_type}'"
     end
   end
   
