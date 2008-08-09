@@ -83,6 +83,25 @@ class TestFilteredList < Test::Unit::TestCase
         should_have_result_items ['quick-brown-fox']
       end
     end
+
+    context "filtered by underscore" do
+      setup { @filtered_list = FilteredList.new(@list, :underscore) }
+      
+      context "and search 'Q'" do
+        setup { @results = filtered_list.filter('Q') }
+        should_have_all_result_items
+      end
+      
+      context "and search 'QB'" do
+        setup { @results = filtered_list.filter('QB') }
+        should_have_result_items ['quick_brown_fox']
+      end
+      
+      context "and search 'QuBFo'" do
+        setup { @results = filtered_list.filter('qubrf') }
+        should_have_result_items ['quick_brown_fox']
+      end
+    end
   end
   
   context "Breakup filter string into partials" do

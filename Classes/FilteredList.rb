@@ -46,6 +46,8 @@ class FilteredList
       item.split(/(?:[^A-Z])[A-Z]/)
     when :hyphens
       item.split('-')
+    when :underscore
+      item.split('_')
     else
       throw "Unknown filter type '#{filter_type}'"
     end
