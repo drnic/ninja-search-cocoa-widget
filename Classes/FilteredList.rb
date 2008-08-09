@@ -31,7 +31,7 @@ class FilteredList
         next false if filter_partials.length > partials.length
         _filter_partials = filter_partials.pad(partials.length)
         [partials, _filter_partials].transpose.find do |partial, filter_partial|
-          partial =~ /\b#{filter_partial}/
+          partial =~ /\b#{filter_partial}/i
         end
       end
     end
@@ -42,8 +42,10 @@ class FilteredList
     case filter_type
     when :spaces
       item.split(/\s+/)
-    when :capitalizes
+    when :capitalize
       item.split(/(?:[^A-Z])[A-Z]/)
+    when :hyphens
+      item.split('-')
     else
       throw "Unknown filter type '#{filter_type}'"
     end
