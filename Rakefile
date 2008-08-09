@@ -7,13 +7,13 @@ require 'rake/testtask'
 require 'pathname'
 
 # Application own Settings
-APPNAME               = "«PROJECTNAME»"
+APPNAME               = "NinjaSearch"
 TARGET                = "#{APPNAME}.app"
 #APPVERSION           = "rev#{`svn info`[/Revision: (\d+)/, 1]}"
 APPVERSION            = Time.now.strftime("%Y-%m-%d")
 PUBLISH               = 'yourname@yourhost:path'
 DEFAULT_TARGET        = APPNAME
-DEFAULT_CONFIGURATION = 'Release'
+DEFAULT_CONFIGURATION = 'Debug'
 RELEASE_CONFIGURATION = 'Release'
 
 # Tasks

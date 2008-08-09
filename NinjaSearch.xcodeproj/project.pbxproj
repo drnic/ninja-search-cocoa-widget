@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31DF93890E4DA27600661AC8 /* FilteredList.rb in Resources */ = {isa = PBXBuildFile; fileRef = 31DF93880E4DA27600661AC8 /* FilteredList.rb */; };
 		4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = E8F5E25803AEB7C803A81C6F /* rb_main.rb */; };
@@ -23,6 +24,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		31621B1F0E4BE3A20084937E /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		31DF93880E4DA27600661AC8 /* FilteredList.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = FilteredList.rb; path = Classes/FilteredList.rb; sourceTree = "<group>"; };
 		4DDCA7110ACC9A6100E082CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DDCA7120ACC9A6100E082CE /* NinjaSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinjaSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F5E24E03AEB6EC03A81C6F /* RubyCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RubyCocoa.framework; path = /System/Library/Frameworks/RubyCocoa.framework; sourceTree = "<absolute>"; };
@@ -45,6 +47,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				31DF93880E4DA27600661AC8 /* FilteredList.rb */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				4DDCA7060ACC9A6100E082CE /* MainMenu.nib in Resources */,
 				4DDCA7070ACC9A6100E082CE /* InfoPlist.strings in Resources */,
 				4DDCA7080ACC9A6100E082CE /* rb_main.rb in Resources */,
+				31DF93890E4DA27600661AC8 /* FilteredList.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
