@@ -17,13 +17,20 @@ class Array
 end  
 
 class FilteredList
-  attr_reader :filter_type
+  attr_reader :filter_type, :filter_str, :current_list
   def initialize(list, filter_type)
     @unfiltered_list = list
     @filter_type     = filter_type
   end
   
   def filter(filter_str)
+    return current_list if current_list && filter_str == @filter_str
+    @filter_str == filter_str
+    @current_list = apply_filter(filter_str)
+  end
+  
+  protected
+  def apply_filter(filter_str)
     filter_partials_list = prepare_filter_string_for_search(filter_str)
     @unfiltered_list.select do |item|
       partials = prepare_item_for_search(item)
@@ -36,8 +43,6 @@ class FilteredList
       end
     end
   end
-  
-  protected
   def prepare_item_for_search(item)
     case filter_type
     when :spaces
