@@ -21,6 +21,7 @@ class AppController < OSX::NSObject
     filtered_list_view[row]
   end
 
+
   def original_list
     @input_list ||= begin
       ["Quick Brown Fox",
