@@ -7,6 +7,7 @@
 #
 
 require 'osx/cocoa'
+require 'rubygems'
 
 def rb_main_init
   path = OSX::NSBundle.mainBundle.resourcePath.fileSystemRepresentation

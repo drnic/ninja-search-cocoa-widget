@@ -1,3 +1,6 @@
+require "rubygems"
+require "textmate_ish_list_filter"
+
 class AppController < OSX::NSObject
   include OSX
   
@@ -13,39 +16,31 @@ class AppController < OSX::NSObject
   
   # protocol methods for NSTableView
   def numberOfRowsInTableView(tableView)
-    filtered_list_view.length
+    filter_list_view.length
   end
   
   def tableView_objectValueForTableColumn_row(tableView, tableColumn, row)
     return unless tableView == @resultTableView
-    filtered_list_view[row]
+    filter_list_view[row]
   end
 
 
   def original_list
-    @input_list ||= begin
-      ["Quick Brown Fox",
-        "QUICKBROWNFOX",
-        "QuickBrownFox",
-        "quick_brown_fox",
-        "quick-brown-fox",
-        "quickbrownfox"
-      ]
-    end
+    # TODO remove the defaults + only allow STDIN etc
+    @input_list ||= %w[
+      app/models/article.rb
+      app/controllers/blog_controller.rb
+      test/functionals/blog_controller_test.rb
+      web/log/production.rb
+    ]
   end
   
-  # derives filter type or regular expression from cmd line options
-  # default: spaces
-  def filter_type
-    :hyphens
+  def filter_list
+    @filter_list ||= TextmateIshListFilter::FilterList.new(original_list)
   end
   
-  def filtered_list
-    @filtered_list ||= FilteredList.new(original_list, filter_type)
-  end
-  
-  def filtered_list_view
+  def filter_list_view
     return original_list unless @searchQuery && !@searchQuery.stringValue.nil?
-    filtered_list.filter(@searchQuery.stringValue) # caches result for same filter str
+    filter_list.query(@searchQuery.stringValue.to_s) # caches result for same filter str
   end
 end

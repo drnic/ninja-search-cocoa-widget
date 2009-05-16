@@ -36,6 +36,3 @@ The original list data is passed to NinjaSearch via STDIN.
 
 Dr Nic Williams, [drnicwilliams@gmail.com](mailto:&#x64;&#x72;&#x6E;&#x69;&#x63;&#x77;&#x69;&#x6C;&#x6C;&#x69;&#x61;&#x6D;&#x73;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;), [http://drnicwilliams.com](http://drnicwilliams.com)
 
-## Thanks
-
-* Andrew Snow for the algorithm in `prepare_filter_string_for_search`
