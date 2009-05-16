@@ -11,7 +11,8 @@ class AppController < OSX::NSObject
   end
   
   ib_action :selectItem do |sender|
-    NSLog("#{sender.selectedRow.inspect}")
+    puts filter_list_view[sender.selectedRow]
+    exit
   end
   
   # protocol methods for NSTableView
