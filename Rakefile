@@ -9,10 +9,10 @@ $choctop = ChocTop.new do |s|
   s.remote_dir = '/path/to/upload/root/of/app'
 
   # Custom DMG
-  # s.background_file = "background.jpg"
-  # s.app_icon_position = [100, 90]
-  # s.applications_icon_position =  [400, 90]
-  # s.volume_icon = "dmg.icns"
+  s.background_file = "background.png"
+  s.app_icon_position = [100, 120]
+  s.applications_icon_position =  [400, 120]
+  s.volume_icon = "dmg.icns"
   # s.applications_icon = "appicon.icns" # or "appicon.png"
 end
 
@@ -29,12 +29,9 @@ task :demo_no_build do
     build_type = ENV['BUILD_TYPE'] || 'Debug'
     widget = "build/#{build_type}/#{$choctop.target}/Contents/MacOS/#{$choctop.name}"
     files = Dir["**/*"].map { |f| e_sh f }.join("\n").gsub("'",%q{\'})
-    p res = %x{echo '#{files}' | #{e_sh widget}  2>/dev/console}
+    
+    p res = %x{NINJA_DATA='#{files}' #{e_sh widget}  2>/dev/console}
     p canceled = ($? != 0)
-    # res   = Shellwords.shellwords(res)
-    # msg = res[1]
-    # files = res[2..-1]
-    # return canceled, msg, files
   end
   
 end
