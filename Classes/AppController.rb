@@ -27,13 +27,11 @@ class AppController < OSX::NSObject
 
 
   def original_list
-    # TODO remove the defaults + only allow STDIN etc
-    @input_list ||= %w[
-      app/models/article.rb
-      app/controllers/blog_controller.rb
-      test/functionals/blog_controller_test.rb
-      web/log/production.rb
-    ]
+    list_or_file_name = ENV['NINJA_DATA'] || STDIN.read
+    if File.exists?(list_or_file_name)
+      list_or_file_name = File.read(list_or_file_name)
+    end
+    @input_list = list_or_file_name.split("\n")
   end
   
   def filter_list

@@ -1,0 +1,17 @@
+app_icon.icns
+app_icon.png
+appcast/build/NinjaSearch-1.0.dmg
+Classes/AppController.rb
+English.lproj/InfoPlist.strings
+English.lproj/MainMenu.nib/designable.nib
+English.lproj/MainMenu.nib/keyedobjects.nib
+fixtures/this_project.txt
+Info.plist
+main.m
+NinjaSearch.xcodeproj/project.pbxproj
+Rakefile
+rb_main.rb
+README.markdown
+release_notes.txt
+release_notes_template.html.erb
+tasks/test_unit.rake
